@@ -1,0 +1,5 @@
+FROM postgres:15
+
+ENV POSTGRES_USER mobile
+ENV POSTGRES_PASSWORD password123
+ENV POSTGRES_DB mobile
