@@ -74,6 +74,12 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-tools</artifactId>
+			<version>5.6.15.Final</version>
+		</dependency>
 	</dependencies>
 
 	<build>
