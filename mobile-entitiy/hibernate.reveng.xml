@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- hibernate.sourceforge.netがメンテの際取得できない為、自前でdtdをS3に保持 -->
+<!DOCTYPE hibernate-reverse-engineering SYSTEM "https://mono-lib.s3-ap-northeast-1.amazonaws.com/hibernate-reverse-engineering-3.0.dtd">
+
+<!-- See also -->
+<!-- https://docs.jboss.org/tools/latest/en/hibernatetools/html/reverseengineering.html -->
+
+<hibernate-reverse-engineering>
+  <type-mapping>
+    <sql-type jdbc-type="CHAR" hibernate-type="java.lang.String" />
+    <sql-type jdbc-type="DATE" hibernate-type="java.time.LocalDate" />
+    <sql-type jdbc-type="TIME" hibernate-type="java.time.LocalDateTime" />
+    <sql-type jdbc-type="TIMESTAMP" hibernate-type="java.time.LocalDateTime" />
+    <sql-type jdbc-type="NUMERIC" hibernate-type="java.math.BigDecimal" />
+    <sql-type jdbc-type="OTHER" hibernate-type="java.lang.String" />
+  </type-mapping>
+
+  <table-filter match-name="flyway_schema_history" exclude="true" />
+
+  <table-filter match-name="users" package="jp.com.example.domain.mobile" />
+  <table-filter match-name="menu_categories" package="jp.com.example.domain.mobile" />
+  <table-filter match-name="menu_items" package="jp.com.example.domain.mobile" />
+  <table-filter match-name="orders" package="jp.com.example.domain.mobile" />
+  <table-filter match-name="order_items" package="jp.com.example.domain.mobile" />
+  <table-filter match-name="payments" package="jp.com.example.domain.mobile" />
+  <table-filter match-name="promotions" package="jp.com.example.domain.mobile" />
+  <table-filter match-name="user_promotions" package="jp.com.example.domain.mobile" />
+</hibernate-reverse-engineering>
