@@ -12,38 +12,8 @@
 		<java.version>17</java.version>
 	</properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-tools</artifactId>
-			<version>5.6.2.Final</version>
-		</dependency>
-
-		<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-tools-maven-plugin</artifactId>
-				<version>5.6.2.Final</version>
-		</dependency>
-	</dependencies>
-
 	<build>
 		<plugins>
-
       <plugin>
           <groupId>org.hibernate</groupId>
           <artifactId>hibernate-tools-maven-plugin</artifactId>
@@ -60,27 +30,44 @@
               <componentProperties>
                   <revengfile>../mobile-entity/hibernate.reveng.xml</revengfile>
                   <propertyfile>../mobile-entity/hibernate.cfg.xml</propertyfile>
+									<ejb3>true</ejb3>
+                  <jdk5>true</jdk5> 
               </componentProperties>
           </configuration>
 					<dependencies>
+
+							<dependency>
+								<groupId>org.hibernate</groupId>
+								<artifactId>hibernate-tools</artifactId>
+								<version>5.6.2.Final</version>
+							</dependency>
+
 							<dependency>
 									<groupId>org.postgresql</groupId>
 									<artifactId>postgresql</artifactId>
 									<version>42.2.23</version>
 							</dependency>
+
+							<dependency>
+									<groupId>org.hibernate</groupId>
+									<artifactId>hibernate-annotations</artifactId>
+									<version>3.5.6-Final</version>
+							</dependency>
+
+							<dependency>
+									<groupId>org.hibernate</groupId>
+									<artifactId>hibernate-entitymanager</artifactId>
+									<version>5.6.15.Final</version>
+							</dependency>
+
+							<dependency>
+								<groupId>javax.persistence</groupId>
+								<artifactId>javax.persistence-api</artifactId>
+								<version>2.2</version>
+							</dependency>
+
 					</dependencies>
       </plugin>
-
-			<plugin>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-maven-plugin</artifactId>
-				<configuration>
-					<url>jdbc:postgresql://localhost:5435/mobile</url>
-					<user>mobile</user>
-					<password>password123</password>
-				</configuration>
-			</plugin>
-
 		</plugins>
 	</build>
 
