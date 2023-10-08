@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>mobile-entity</artifactId>
+	<artifactId>mobile-reveng</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mobile</name>
 	<description>mobile project</description>
@@ -24,12 +24,12 @@
                       <name>hbm2java</name>
                       <implementation>jdbcconfiguration</implementation>
                       <!-- <outputDirectory>target/generated-sources/hibernate</outputDirectory> -->
-											<outputDirectory>../mobile-entity/target</outputDirectory>
+											<outputDirectory>../mobile-reveng/target</outputDirectory>
                   </component>
               </components>
               <componentProperties>
-                  <revengfile>../mobile-entity/hibernate.reveng.xml</revengfile>
-                  <propertyfile>../mobile-entity/hibernate.cfg.xml</propertyfile>
+                  <revengfile>../mobile-reveng/hibernate.reveng.xml</revengfile>
+                  <propertyfile>../mobile-reveng/hibernate.cfg.xml</propertyfile>
 									<ejb3>true</ejb3>
                   <jdk5>true</jdk5> 
               </componentProperties>

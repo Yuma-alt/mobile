@@ -137,7 +137,7 @@
 
 	<modules>
 		<module>mobile-back</module>
-		<module>mobile-entity</module>
+		<module>mobile-reveng</module>
 	</modules>
 
 </project>
