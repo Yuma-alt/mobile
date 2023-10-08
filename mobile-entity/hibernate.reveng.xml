@@ -16,6 +16,7 @@
     <sql-type jdbc-type="OTHER" hibernate-type="java.lang.String" />
   </type-mapping>
 
+  <schema-selection match-catalog="mobile"/>
   <table-filter match-name="flyway_schema_history" exclude="true" />
 
   <table-filter match-name="users" package="jp.com.example.domain.mobile" />
@@ -26,4 +27,7 @@
   <table-filter match-name="payments" package="jp.com.example.domain.mobile" />
   <table-filter match-name="promotions" package="jp.com.example.domain.mobile" />
   <table-filter match-name="user_promotions" package="jp.com.example.domain.mobile" />
+    <metadata>
+        <meta attribute="ejb3">true</meta>
+    </metadata>
 </hibernate-reverse-engineering>
